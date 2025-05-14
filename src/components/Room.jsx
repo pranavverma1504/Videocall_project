@@ -20,11 +20,18 @@ const ref=useRef(null);
         zp.joinRoom({
         container: element,
         sharedLinks: [
-          {
-            name: 'Personal link',
-            url:`http://localhost:5173/room/${id}`
-          },
-        ],
+  {
+    name: 'Personal link',
+    url: `${window.location.origin}/room/${id}`
+  },
+],
+sharedLinks: [
+  {
+    name: 'Personal link',
+    url: `${window.location.origin}/room/${id}`
+  },
+],
+
         scenario: {
           mode: ZegoUIKitPrebuilt.OneONOneCall, // To implement 1-on-1 calls, modify the parameter here to [ZegoUIKitPrebuilt.OneONoneCall].
         },
